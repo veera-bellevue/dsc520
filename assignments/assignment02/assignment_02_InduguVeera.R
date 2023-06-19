@@ -88,12 +88,8 @@ table_names <- dbdbListTables(db)
 ## Read all of the tables at once using the `lapply` function and assign the result to the `tables` variable
 ## Use `table_names`, `dbReadTable`, and `conn = db` as arguments
 ## Print out the tables
-conn <- db
-tables_list <- list(table_names)
-my_function <- dbReadTable(conn,table_names)
-tables <- lappy(tables_list,my_function)
+tables <- lapply(table_names,function(tablename_var){dbReadTable(conn=db,tablename_var)})
 tables
-
 ## Use the `dbDisconnect` function to disconnect from the database
 dbDisconnect(db)
 
