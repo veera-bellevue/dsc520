@@ -38,7 +38,9 @@ ggplot(heights_df, aes(x=height, y=earn, col=sex)) + geom_point()
 ## Title: Height vs. Earnings
 ## X label: Height (Inches)
 ## Y Label: Earnings (Dollars)
-ggplot(heights_df, aes(x=height, y=earn, col=sex)) + geom_point() + xlab("Height (Inches)") + ylab("Earnings (Dollars)") + ggtitle("Height vs. Earnings")
+ggplot(heights_df, aes(x=height, y=earn, col=sex)) + geom_point() + 
+  xlab("Height (Inches)") + ylab("Earnings (Dollars)") + 
+  ggtitle("Height vs. Earnings")
 
 # https://ggplot2.tidyverse.org/reference/geom_histogram.html
 ## Create a histogram of the `earn` variable using `geom_histogram()`
